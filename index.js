@@ -1,6 +1,12 @@
 const express = require("express");
 const app = express();
 const PORT = 3001;
+const cors = require("cors");
+
+var corsOptions = {
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200,
+};
 
 // load data file
 const path = require("path");
@@ -9,6 +15,7 @@ const pathToFile = path.resolve("./data.json");
 console.log(pathToFile);
 // END load data file
 
+app.use(cors(corsOptions));
 const getResources = () => JSON.parse(fs.readFileSync(pathToFile));
 
 // endpoints
