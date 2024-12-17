@@ -18,6 +18,9 @@ console.log(pathToFile);
 // app.use(cors(corsOptions));
 const getResources = () => JSON.parse(fs.readFileSync(pathToFile));
 
+// get JSON
+app.use(express.json());
+
 // endpoints
 app.get("/", (req, res) => {
   res.send("hello node js server");
@@ -25,6 +28,12 @@ app.get("/", (req, res) => {
 app.get("/api/resources", (req, res) => {
   const resources = getResources();
   res.send(resources);
+});
+app.post("/api/resources", (req, res) => {
+  const resources = getResources();
+  console.log("data received on server");
+  console.log(req.body);
+  res.send("data received on server");
 });
 // END endpoints
 
