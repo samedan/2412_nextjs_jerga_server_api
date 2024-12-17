@@ -31,9 +31,19 @@ app.get("/api/resources", (req, res) => {
 });
 app.post("/api/resources", (req, res) => {
   const resources = getResources();
-  console.log("data received on server");
-  console.log(req.body);
-  res.send("data received on server");
+  const resource = req.body;
+  resource.createdAt = new Date();
+  resource.status = "inactive";
+  resource.id = Date.now().toString();
+  resources.push(resource);
+
+  fs.writeFile(pathToFile, JSON.stringify(resources, null, 2), (error) => {
+    if (error) {
+      return res.status(422).send("Cannot store data in file");
+    } else {
+      return res.send("Data saved");
+    }
+  });
 });
 // END endpoints
 
