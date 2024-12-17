@@ -29,6 +29,12 @@ app.get("/api/resources", (req, res) => {
   const resources = getResources();
   res.send(resources);
 });
+app.get("/api/resources/:id", (req, res) => {
+  const resources = getResources();
+  const resourceId = req.params.id;
+  const resource = resources.find((item) => item.id === resourceId);
+  res.send(resource);
+});
 app.post("/api/resources", (req, res) => {
   const resources = getResources();
   const resource = req.body;
