@@ -4,7 +4,6 @@
     "title": "Learnign singleton patters",
     "description": "Lorem Lipsum Singleton JS language, lorem ipsum.",
     "link": "https://www.link.com",
-    "image": "",
     "priority": 3,
     "timeToFinish": 120,
     "status": "inactive"
@@ -14,7 +13,6 @@
     "title": "Javscript Leanring",
     "description": "Lorem Lipsum Singleton JS language, lorem ipsum.",
     "link": "https://www.link2.com",
-    "image": "",
     "priority": 2,
     "timeToFinish": 100,
     "status": "inactive"
@@ -24,7 +22,6 @@
     "title": "Laravel Secrets & Login",
     "description": "Lorem Lipsum Singleton JS language, lorem ipsum.",
     "link": "https://www.link3.com",
-    "image": "",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
