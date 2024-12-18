@@ -40,6 +40,19 @@ app.patch("/api/resources/:id", (req, res) => {
   const { id } = req.params;
   const index = resources.findIndex((item) => item.id === id);
   resources[index] = req.body;
+  // only one ActiveResource
+  const activeResource = resources.find(
+    (resource) => resource.status === "active"
+  );
+  if (req.body.status === "active") {
+    if (activeResource) {
+      return res.status(422).send("Already active resource");
+    }
+    resources[index].status = "active";
+    resources[index].activationTime = new Date();
+  }
+  // END only one ActiveResource
+
   fs.writeFile(pathToFile, JSON.stringify(resources, null, 2), (error) => {
     if (error) {
       return res.status(422).send("Cannot store data in file");

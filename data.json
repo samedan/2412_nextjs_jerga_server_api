@@ -6,7 +6,7 @@
     "priority": "2",
     "timeToFinish": 60,
     "createdAt": "2024-12-17T16:13:27.961Z",
-    "status": "inactive",
+    "status": "active",
     "id": "1734452007961"
   },
   {
@@ -60,7 +60,7 @@
     "id": "1734443099990"
   },
   {
-    "title": "2st Title",
+    "title": "UPDATED 2st Title",
     "description": "2st Desc",
     "link": "https://portfolio.articole-smart.eu/",
     "priority": "1",
