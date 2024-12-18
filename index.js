@@ -51,6 +51,13 @@ app.patch("/api/resources/:id", (req, res) => {
   const activeResource = resources.find(
     (resource) => resource.status === "active"
   );
+  // check if Resource is marked as Complete
+  if (resources[index].status === "complete") {
+    return res
+      .status(422)
+      .send("Cannot update because resource has been completed.");
+  }
+
   resources[index] = req.body;
   if (activeResource) {
     console.log("activeResoucre found");
