@@ -20,7 +20,7 @@
     "id": "1734451417423"
   },
   {
-    "title": "REVALIDATE redirect",
+    "title": "REVALIDATE redirect EDIT",
     "description": "Er<ear",
     "link": "fdsqfdsq",
     "priority": "2",
@@ -36,9 +36,8 @@
     "priority": "2",
     "timeToFinish": 60,
     "createdAt": "2024-12-17T13:47:25.801Z",
-    "status": "active",
-    "id": "1734443245801",
-    "activationTime": "2024-12-18T09:38:56.028Z"
+    "status": "inaactive",
+    "id": "1734443245801"
   },
   {
     "title": "sdfds",
@@ -51,7 +50,7 @@
     "id": "1734443159098"
   },
   {
-    "title": "3st Title",
+    "title": "3st Title Yes",
     "description": "3st Desc",
     "link": "https://portfolio.articole-smart.eu/",
     "priority": "1",
