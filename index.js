@@ -39,11 +39,16 @@ app.patch("/api/resources/:id", (req, res) => {
   const resources = getResources();
   const { id } = req.params;
   const index = resources.findIndex((item) => item.id === id);
-  resources[index] = req.body;
+
   // only one ActiveResource
   const activeResource = resources.find(
     (resource) => resource.status === "active"
   );
+  resources[index] = req.body;
+  if (activeResource) {
+    console.log("activeResoucre found");
+    console.log(activeResource);
+  }
   if (req.body.status === "active") {
     if (activeResource) {
       return res.status(422).send("Already active resource");
